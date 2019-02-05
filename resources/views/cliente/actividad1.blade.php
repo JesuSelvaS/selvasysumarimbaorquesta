@@ -19,7 +19,7 @@
                     <p>Equipo: Selvas y su Marimba Orquesta</p>
                 </div>
                 <div class="teamMember">
-                    <p>Sol Santiago Sheyla Valeria</p>
+                    <p>Cruz Rodas Edrey Alfredo</p>
                 </div>
                 <div class="memberInfo">
                     <div class="personalInfo">
@@ -71,7 +71,7 @@
                     <p>Equipo: Selvas y su Marimba Orquesta</p>
                 </div>
                 <div class="teamMember">
-                    <p>Sol Santiago Sheyla Valeria</p>
+                    <p>González Ruíz Daniel Alejandro</p>
                 </div>
                 <div class="memberInfo">
                     <div class="personalInfo">
@@ -123,7 +123,7 @@
                     <p>Equipo: Selvas y su Marimba Orquesta</p>
                 </div>
                 <div class="teamMember">
-                    <p>Sol Santiago Sheyla Valeria</p>
+                    <p>Gutiérrez Gutiérrez José Leyder</p>
                 </div>
                 <div class="memberInfo">
                     <div class="personalInfo">
@@ -175,7 +175,7 @@
                     <p>Equipo: Selvas y su Marimba Orquesta</p>
                 </div>
                 <div class="teamMember">
-                    <p>Sol Santiago Sheyla Valeria</p>
+                    <p>Sánchez Selvas Jesús Alberto</p>
                 </div>
                 <div class="memberInfo">
                     <div class="personalInfo">
