@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="http://selvasysumarimbaorquesta.creativasoftline.com">
+    <meta name="owner" content="Selvas y su Marimba Orquesta">
+    <meta name="subject" content="Selvas y su Marimba Orquesta: Desarrollo Web">
+    <meta property="og:type" content="article" />
+    <meta name="keywords" content="hacer una pagina, comprar paginas online, cotizar paginas, paginas web" />
     <title>Práctica 1 | Selvas y su Marimba Orquesta</title>
 
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
@@ -13,7 +18,22 @@
 
 <body>
     <header>
-        <nav></nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="http://selvasysumarimbaorquesta.creativasoftline.com/actividad1">Selvas y su MO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link disabled" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <div class="pageContent container-fluid">
         <h1>Actividad 1</h1>
@@ -356,7 +376,12 @@
                         <p>Es una Institución educativa pública de educación superior, que forma parte del Sistema Nacional de Institutos Tecnológicos de México.</p>
                     </aside>
                     <aside>
-
+                        <h2>Ingeniería en Sistemas Computacionales</h2>
+                        <p>Es una rama interdisciplinaria de la ingeniería que permite estudiar y comprender la realidad, con el propósito de implementar u optimizar sistemas complejos.</p>
+                    </aside>
+                    <aside>
+                        <h2>HTML</h2>
+                        <p>Sigla en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado para la elaboración de páginas web.</p>
                     </aside>
                 </div>
 
@@ -367,7 +392,9 @@
 
     </div>
 
-    <footer></footer>
+    <footer>
+        <p>© 2019 - Powered By <a href="http://selvasysumarimbaorquesta.creativasoftline.com/actividad1">Selvas y su Marimba Orquesta</a></p>
+    </footer>
 
     <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
