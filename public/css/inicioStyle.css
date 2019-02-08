@@ -1,0 +1,220 @@
+body {
+  overflow: hidden;
+  display: none;
+}
+
+body .pageContent button {
+  outline: none;
+}
+
+body .pageContent .messageContent {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #4B5BE9;
+  top: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  right: 0;
+  bottom: 0;
+  animation: zooming ease infinite 4s;
+  -webkit-animation: zooming ease infinite 4s;
+  -o-animation: zooming ease infinite 4s;
+  -ms-animation: zooming ease infinite 4s;
+  -moz-animation: zooming ease infinite 4s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+body .pageContent .messageContent p {
+  color: #fff;
+  text-align: center;
+  margin: 75px 0;
+  font-size: 2em;
+  font-family: sans-serif;
+}
+
+body .pageContent .messageContent p span {
+  -webkit-transition: ease all 1s;
+  transition: ease all 1s;
+  opacity: 0;
+}
+
+body .pageContent .messageContent p span.ms2 {
+  position: absolute;
+  left: 0;
+}
+
+body .pageContent .messageContent p span.ms1.active {
+  opacity: 1;
+}
+
+body .pageContent .messageContent p span.ms2.active {
+  opacity: 1;
+}
+
+body .pageContent .messageContent::before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-color: #2033E3;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  right: 0;
+  bottom: 0;
+  animation: miniZooming ease infinite 2s;
+  -webkit-animation: miniZooming ease infinite 2s;
+  -o-animation: miniZooming ease infinite 2s;
+  -ms-animation: miniZooming ease infinite 2s;
+  -moz-animation: miniZooming ease infinite 2s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+body .pageContent .integrantesContent {
+  background-color: #4B5BE9;
+  position: fixed;
+  z-index: 100;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  height: 250px;
+  width: 280px;
+  top: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+body .pageContent .integrantesContent p {
+  white-space: pre-line;
+  text-align: center;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+body .pageContent .integrantesContent.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body .pageContent .integrantesButton {
+  position: fixed;
+  width: 150px;
+  top: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  right: 0;
+  bottom: 0;
+  bottom: 10%;
+  top: auto;
+}
+
+body .pageContent .integrantesButton button {
+  background-color: #4B5BE9;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 40px;
+  border: none;
+  font-family: sans-serif;
+  width: 150px;
+  height: 40px;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+}
+
+body .pageContent .integrantesButton button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.7);
+}
+
+@-webkit-keyframes zooming {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes zooming {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes miniZooming {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes miniZooming {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes desap {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes desap {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=inicioStyle.css.map */

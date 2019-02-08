@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="es-MX">
+@extends('master.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="http://selvasysumarimbaorquesta.creativasoftline.com">
-    <meta name="owner" content="Selvas y su Marimba Orquesta">
-    <meta name="subject" content="Selvas y su Marimba Orquesta: Desarrollo Web">
-    <meta property="og:type" content="article" />
-    <meta name="keywords" content="hacer una pagina, comprar paginas online, cotizar paginas, paginas web" />
-    <title>Práctica 1 | Selvas y su Marimba Orquesta</title>
+@section('content')
 
-    <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-</head>
-
-<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="http://selvasysumarimbaorquesta.creativasoftline.com/actividad1">Selvas y su MO</a>
@@ -26,16 +11,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link disabled" href="#">Inicio</a>
+                        <a class="nav-link disabled" href="/">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de</a>
+                        <a class="nav-link" href="/menu">Menú</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="pageContent container-fluid">
+    <div class="pageContent container-fluid ">
         <h1>Actividad 1</h1>
         <div class="row">
             <section class="col-md-4">
@@ -392,13 +377,5 @@
 
     </div>
 
-    <footer>
-        <p>© 2019 - Powered By <a href="http://selvasysumarimbaorquesta.creativasoftline.com/actividad1">Selvas y su Marimba Orquesta</a></p>
-    </footer>
-
-    <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
-</body>
-
-</html>
+    
+@endsection

@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('cliente.inicio');
 });
 
+Route::resource('menu','menuController');
 Route::resource('actividad1','actividad1Controller');

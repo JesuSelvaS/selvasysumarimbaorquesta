@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class actividad1Controller extends Controller
 {
     public function index(){
-        return view('cliente.actividad1');
+        return view('cliente.actividad1',['nameActividad'=>'actividad1']);
     }
 }

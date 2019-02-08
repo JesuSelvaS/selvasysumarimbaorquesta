@@ -1,0 +1,149 @@
+// Mixins
+@mixin centrarAPantalla {
+    top: 0;
+    left: 0;
+    margin: auto;
+    display: block;
+    right: 0;
+    bottom: 0;
+}
+
+// PageContent
+body {
+    overflow: hidden;
+    display: none;
+    .pageContent {
+        button {
+            outline: none;
+        }
+        .messageContent {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #4B5BE9;
+            @include centrarAPantalla;
+            animation: zooming ease infinite 4s;
+            -webkit-animation: zooming ease infinite 4s;
+            -o-animation: zooming ease infinite 4s;
+            -ms-animation: zooming ease infinite 4s;
+            -moz-animation: zooming ease infinite 4s;
+            transform-origin: center;
+            p {
+                color: #fff;
+                text-align: center;
+                margin: 75px 0;
+                font-size: 2em;
+                font-family: sans-serif;
+                span {
+                    transition: ease all 1s;
+                    opacity: 0;
+                    &.ms2 {
+                        position: absolute;
+                        left: 0;
+                    }
+                    &.ms1.active {
+                        opacity: 1;
+                    }
+                    &.ms2.active {
+                        opacity: 1;
+                    }
+                }
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100px;
+                height: 100px;
+                background-color: #2033E3;
+                border-radius: 50%;
+                @include centrarAPantalla;
+                animation: miniZooming ease infinite 2s;
+                -webkit-animation: miniZooming ease infinite 2s;
+                -o-animation: miniZooming ease infinite 2s;
+                -ms-animation: miniZooming ease infinite 2s;
+                -moz-animation: miniZooming ease infinite 2s;
+                transform-origin: center;
+            }
+        }
+        .integrantesContent {
+            background-color: #4B5BE9;
+            position: fixed;
+            z-index: 100;
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+            height: 250px;
+            width: 280px;
+            @include centrarAPantalla;
+            transition: ease all 0.5s;
+            transform-origin: center;
+            transform: scale(0);
+            p {
+                white-space: pre-line;
+                text-align: center;
+                font-family: sans-serif;
+                color: #fff;
+                font-size: 1.1em;
+            }
+            &.active {
+                transform: scale(1);
+            }
+        }
+        .integrantesButton {
+            position: fixed;
+            width: 150px;
+            @include centrarAPantalla;
+            bottom: 10%;
+            top: auto;
+            button {
+                background-color: #4B5BE9;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 40px;
+                border: none;
+                font-family: sans-serif;
+                width: 150px;
+                height: 40px;
+                transition: ease all 0.2s;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: #000;
+                    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.7);
+                }
+            }
+        }
+    }
+}
+
+// Keyframes section
+@keyframes zooming {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes miniZooming {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes desap {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
