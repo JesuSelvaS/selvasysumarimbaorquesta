@@ -161,11 +161,23 @@
 @push('menu')
 <script src="{{asset('js/fontawesome-all.js')}}"></script>
 <script>
-   $(window).load(function(){
-      
-       for(var i = 1; i <= $(".actividadItem").length; i++){
-                $(".actividadesContent .actividadItem:nth-of-type("+ i +")").addClass("show");
-       }
-   });
+$(document).ready(function(){
+    $(window).load(function(){
+        var final = $(".actividadItem").length;
+        var cont = 0;
+        console.log("final: " + final + " cont " + cont);
+        do {
+            cont++;
+            setTimeout(function() {
+                actMenu(cont);
+            }, 1000);
+        }while(cont <= final);
+    });
+});
+// Pendiente animación
+
+function actMenu(cont){
+    $(".actividadesContent .actividadItem:nth-of-type("+ cont +")").addClass("show");
+}
 </script>
 @endpush
