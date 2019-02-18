@@ -23,11 +23,11 @@
                                 </a>
                             </div>
                             <div class="actividadItem">
-                                <a href="/actividad1">
+                                <a href="/actividad2">
                                     <div class="row">
                                         <div class="col-md-10">
                                             <div class="actividadInfo">
-                                                <div class="name"><p>Actividad 1 - Información de Integrantes</p></div>
+                                                <div class="name"><p>Actividad 2 - Información de Integrantes</p></div>
                                                 <div class="fecha"><p>05/Febrero/2019</p></div>
                                                 <div class="descripcion"><p>Se implementó una página básica que contiene información básica de los integrantes del equipo.</p></div>
                                             </div>
