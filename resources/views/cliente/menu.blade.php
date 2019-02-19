@@ -168,9 +168,7 @@ $(document).ready(function(){
         console.log("final: " + final + " cont " + cont);
         do {
             cont++;
-            setTimeout(function() {
-                actMenu(cont);
-            }, 1000);
+            actMenu(cont);
         }while(cont <= final);
     });
 });
