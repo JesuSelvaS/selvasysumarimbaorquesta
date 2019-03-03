@@ -1,12 +1,12 @@
 @extends('master.master') @section('content')
 
 <header>
-    <!-- Implementar nav de Bootstrap 4 -->
+    <!-- Implementar nav de Bootstrap 4, solo copia y pega :3 desde la página oficial-->
 </header>
 
 <main class="pageContent">
     <section class="gallery">
-        <!-- Insertar la galería de Bootstrap 4 con las descripciones, indicadores, y botones  -->
+        <!-- Insertar la galería de Bootstrap 4 con las descripciones, indicadores, y botones, solo copia y pega desde la página oficial :3 -->
     </section>
     <section class="miniAbout">
         <div class="informacionServiciosContent">
