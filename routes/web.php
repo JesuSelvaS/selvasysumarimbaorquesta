@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::resource('menu','menuController');
 Route::resource('actividad1','actividad1Controller');
 Route::resource('actividad2','actividad2Controller');
+Route::resource('actividad3','actividad3Controller');
