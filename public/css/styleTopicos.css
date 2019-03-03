@@ -57,4 +57,17 @@ a:hover {
 .actividad1 body {
   background-color: transparent;
 }
+
+.actividadX body {
+  background-color: #036288;
+}
+
+.actividadX body a,
+.actividadX body p {
+  color: #fff;
+}
+
+.actividadX body section.miniAbout {
+  background-color: #fff;
+}
 /*# sourceMappingURL=styleTopicos.css.map */
