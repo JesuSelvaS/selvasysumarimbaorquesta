@@ -70,4 +70,18 @@ a:hover {
 .actividadX body section.miniAbout {
   background-color: #fff;
 }
+
+.actividad3 .miniAbout {
+  background-color: #036288;
+}
+
+.actividad3 .imageDescription {
+  width: 90px;
+  font-size: 15em;
+}
+
+.actividad3 .imageDescription figure {
+  border: 1px solid white;
+  text-align: center;
+}
 /*# sourceMappingURL=styleTopicos.css.map */

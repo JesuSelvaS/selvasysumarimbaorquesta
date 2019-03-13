@@ -67,4 +67,16 @@ a:hover {
     }
 }
 
-.actividad3 {}
+.actividad3 {
+    .miniAbout {
+        background-color: #036288;
+    }
+    .imageDescription {
+        width: 90px;
+        font-size: 15em;
+        figure {
+            border: 1px solid white;
+            text-align: center;
+        }
+    }
+}
