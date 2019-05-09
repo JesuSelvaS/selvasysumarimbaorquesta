@@ -19,3 +19,7 @@ Route::resource('menu','menuController');
 Route::resource('actividad1','actividad1Controller');
 Route::resource('actividad2','actividad2Controller');
 Route::resource('actividad3','actividad3Controller');
+Route::resource('actividad4','actividad4Controller');
+Route::get('addPost','actividad4Controller@addPost');
+Route::get('removePost','actividad4Controller@removePost');
+Route::get('editPost','actividad4Controller@editPost');

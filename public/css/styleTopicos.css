@@ -1,5 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Anton|Indie+Flower|Oswald|Pacifico|Roboto|Sniglet|ZCOOL+QingKe+HuangYou);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   display: none;
+}
+
+.blackCap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: ease all 0.4s;
+  transition: ease all 0.4s;
+}
+
+.blackCap.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 a:hover {
@@ -69,5 +96,975 @@ a:hover {
 
 .actividadX body section.miniAbout {
   background-color: #fff;
+}
+
+.actividad3 header {
+  background-color: #0395ce;
+  font-family: "Sniglet", sans-serif;
+  overflow: hidden;
+  padding: 0% 3%;
+}
+
+.actividad3 header .switchNav {
+  display: none;
+}
+
+.actividad3 header nav > * {
+  display: inline-block;
+}
+
+.actividad3 header nav .actionsNav {
+  width: calc(100% - 200px);
+}
+
+.actividad3 header nav .actionsNav ul {
+  margin-left: 3%;
+  width: 100%;
+}
+
+.actividad3 header nav .actionsNav ul li {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  padding: 1% 2%;
+}
+
+.actividad3 header nav .actionsNav ul li:hover {
+  cursor: pointer;
+  background-color: #8265f5;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.actividad3 header nav .actionsNav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.actividad3 header nav .actionsNav ul li a:hover {
+  text-decoration: none;
+}
+
+.actividad3 main .gallery {
+  position: relative;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+}
+
+.actividad3 main .gallery .imageItem figure {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.actividad3 main .gallery .imageItem figure img {
+  width: 100%;
+}
+
+.actividad3 main .gallery .imageItem figure figcaption {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10% 4%;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.actividad3 main .gallery .imageItem figure figcaption .titleImage h3 {
+  color: #fff;
+  font-family: "ZCOOL QingKe HuangYou", sans-serif;
+  font-size: 3.5em;
+}
+
+.actividad3 main .gallery .imageItem figure figcaption .descImage p {
+  color: #fff;
+  font-family: "Sniglet", sans-serif;
+  width: 60%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.actividad3 main .gallery .imageItem figure figcaption .actionsImage .action {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 0% 2%;
+}
+
+.actividad3 main .gallery .imageItem figure figcaption .actionsImage .action button {
+  font-family: "Sniglet", sans-serif;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  font-size: 1.1em;
+  width: 100%;
+  height: 100%;
+  padding: 1% 2%;
+  border-radius: 40px;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.actividad3 main .gallery .imageItem figure figcaption .actionsImage .action button:hover {
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.actividad3 main .gallery .imageItem figure figcaption .actionsImage .action button:focus {
+  outline: none;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription {
+  background-color: transparent;
+  color: #333;
+  padding: 3% 2%;
+  position: relative;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription > * {
+  display: inline-block;
+  width: 48%;
+  vertical-align: middle;
+  position: relative;
+  z-index: 100;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: calc(100vw / 4) solid transparent;
+  border-right: calc(100vw / 4) solid transparent;
+  border-top: calc(100vw / 4) solid #fff;
+  top: 55%;
+  left: 0;
+  display: block;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  -webkit-animation: infinite ease 10s upDownArrow;
+          animation: infinite ease 10s upDownArrow;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription .imageDescription {
+  position: relative;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription .imageDescription::before {
+  position: absolute;
+  content: '';
+  width: 320px;
+  height: 320px;
+  display: block;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed #036288;
+  border-radius: 50%;
+  z-index: 10;
+  -webkit-animation: linear 50s gira infinite;
+          animation: linear 50s gira infinite;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription .imageDescription figure {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription .imageDescription figure img {
+  position: relative;
+  right: 50%;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription .info h2 {
+  font-family: "Indie Flower", sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.actividad3 main .miniAbout .informacionServiciosContent .aboutDescription .info p {
+  font-family: "Sniglet", sans-serif;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.actividad3 main .servicesContent {
+  background-image: url("../img/edu.jpg");
+  background-attachment: fixed;
+  padding: 2% 0%;
+  position: relative;
+  padding-top: 13%;
+}
+
+.actividad3 main .servicesContent::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+
+.actividad3 main .servicesContent * {
+  position: relative;
+  z-index: 1000;
+}
+
+.actividad3 main .servicesContent .titleServices h2 {
+  text-align: center;
+  font-family: "ZCOOL QingKe HuangYou", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.actividad3 main .servicesContent .serviceItem {
+  display: inline-block;
+  margin: 3% 4%;
+  width: calc(100% / 4);
+}
+
+.actividad3 main .servicesContent .serviceItem .iconService {
+  font-size: 3.5em;
+  text-align: center;
+  color: #fff;
+}
+
+.actividad3 main .servicesContent .serviceItem .descService h3 {
+  text-align: center;
+  color: #fff;
+  font-family: "Sniglet", sans-serif;
+  font-size: 2em;
+}
+
+.actividad3 main .servicesContent .serviceItem .descService p {
+  color: #fff;
+  text-align: center;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 1.3em;
+}
+
+.actividad3 main .bestModulos > h3 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.actividad3 main .bestModulos .modulosContent {
+  padding: 5%;
+  padding-top: 2%;
+}
+
+.actividad3 main .bestModulos .modulosContent .modulo {
+  width: calc(100% / 3);
+  padding: 2%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 -2px;
+}
+
+.actividad3 main .bestModulos .modulosContent .modulo .moduloImage {
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.actividad3 main .bestModulos .modulosContent .modulo .moduloTitle {
+  font-family: "Sniglet", sans-serif;
+  color: #333;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.actividad3 main .bestModulos .modulosContent .modulo .descModulo {
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  color: #737373;
+  font-size: 0.9em;
+  margin: 2% 0%;
+}
+
+.actividad3 main .bestModulos .modulosContent .modulo .moduloActions button {
+  display: block;
+  margin: auto;
+  background-color: #333;
+  color: #fff;
+  font-family: sans-serif;
+  width: 50%;
+  border: none;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  padding: 1% 2%;
+  font-size: 1.2em;
+  margin-top: 1%;
+  -webkit-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  margin-top: 5%;
+}
+
+.actividad3 main .bestModulos .modulosContent .modulo .moduloActions button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.actividad3 footer .row {
+  padding: 2%;
+  background-color: #333;
+  width: 100%;
+}
+
+.actividad3 footer .row > p {
+  text-align: center;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 1%;
+}
+
+.actividad3 footer .row .footerCol {
+  width: calc(100% / 3 - 50px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.actividad3 footer .row .footerCol .title h3 {
+  color: #fff;
+  text-align: center;
+  font-family: "ZCOOL QingKe HuangYou", sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 4%;
+}
+
+.actividad3 footer .row .footerCol .description p {
+  color: #fff;
+  font-family: "Sniglet", sans-serif;
+}
+
+.actividad3 footer .row .footerCol .description ul li {
+  color: #fff;
+  font-family: "Sniglet", sans-serif;
+  list-style: none;
+  padding: 2% 1%;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+}
+
+.actividad3 footer .row .footerCol .description ul li:hover {
+  background-color: #fff;
+  color: #333;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.actividad3 footer .row .footerCol .description ul li:hover a {
+  color: #333;
+}
+
+.actividad3 footer .row .footerCol .description ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.actividad3 footer .row .footerCol .description ul li a:hover {
+  text-decoration: none;
+}
+
+.actividad3 footer .row .footerCol .description a {
+  text-decoration: none;
+  width: 100%;
+}
+
+.actividad3 footer .row .footerCol .description a button {
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  padding: 2%;
+  font-family: sans-serif;
+  color: #333;
+  border-radius: 2px;
+  background-color: #fff;
+  border: none;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+}
+
+.actividad3 footer .row .footerCol .description a button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.actividad3 body {
+  display: block;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 300px) {
+  .actividad3 header .switchNav {
+    display: block;
+  }
+  .actividad3 header .switchNav button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    font-size: 1.5em;
+    display: block;
+    right: 3%;
+    top: 3%;
+    background-color: #036288;
+    color: #fff;
+    border: 1px solid #fff;
+    -webkit-transition: ease all 0.3s;
+    transition: ease all 0.3s;
+  }
+  .actividad3 header .switchNav button:hover {
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #0362E3;
+    height: 100%;
+    left: -150%;
+    width: 70%;
+    overflow: hidden;
+    -webkit-box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    -webkit-transition: ease all 0.5s;
+    transition: ease all 0.5s;
+  }
+  header nav.active {
+    left: 0;
+  }
+  div.logo figure img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .actividad3 header nav > * {
+    display: block;
+    width: 100%;
+    margin: 2% 0%;
+  }
+  .actividad3 header nav .actionsNav {
+    width: 100%;
+  }
+  .actividad3 header nav .actionsNav ul li {
+    width: 100%;
+    padding: 5% 3%;
+    font-size: 1.5em;
+    margin: 2% 0%;
+  }
+  .actividad3 main .gallery .imageItem figure figcaption .titleImage h3 {
+    text-align: center;
+  }
+  .actividad3 main .gallery .imageItem figure figcaption .descImage p {
+    width: 100%;
+    text-align: justify;
+  }
+  .actividad3 main .gallery .imageItem figure figcaption .actionsImage .action {
+    margin: auto;
+    margin-top: 4%;
+    width: 90%;
+    display: block;
+    font-size: 1.3em;
+  }
+  .actividad3 main .gallery .imageItem figure img {
+    display: none;
+  }
+  .actividad3 main .gallery .imageItem {
+    background-image: url(../img/fondo_image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .actividad3 main .miniAbout .informacionServiciosContent .aboutDescription > * {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+  }
+  .actividad3 main .servicesContent .serviceItem {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+  }
+  .actividad3 main .bestModulos .modulosContent .modulo {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+  }
+  .actividad3 footer .row .footerCol {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+  }
+}
+
+@-webkit-keyframes gira {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes gira {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes upDownArrow {
+  0%,
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+
+@keyframes upDownArrow {
+  0%,
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+
+.actividad4 body {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.actividad4 body header nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.actividad4 body header nav li {
+  display: inline-block;
+  padding: 2% 3%;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+}
+
+.actividad4 body header nav li:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+}
+
+.actividad4 body header nav li:hover a {
+  color: #333;
+}
+
+.actividad4 body header nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.actividad4 body header nav li a:hover {
+  text-decoration: none;
+}
+
+.actividad4 body main {
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+}
+
+.actividad4 body main > * {
+  float: left;
+  width: 50%;
+  height: 1000px;
+}
+
+.actividad4 body main::before {
+  content: '\f104';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  font-family: "FontAwesome";
+  display: block;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 3em;
+  color: #333;
+  padding: 1%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: ease all 0.2s;
+  transition: ease all 0.2s;
+  z-index: 1000;
+}
+
+.actividad4 body main section.addPostSide {
+  background-color: #4f54b5;
+  position: relative;
+}
+
+.actividad4 body main section.addPostSide form {
+  background-color: #036288;
+  position: absolute;
+  display: block;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 8%;
+  bottom: auto;
+  width: 60%;
+  height: 450px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+  padding: 8%;
+}
+
+.actividad4 body main section.addPostSide form h3 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.actividad4 body main section.addPostSide form button {
+  background-color: #ffffff;
+  color: #333;
+  width: 50%;
+  display: block;
+  margin: auto;
+  border: none;
+  border-radius: 3px;
+  padding: 2% 3%;
+}
+
+.actividad4 body main section.addPostSide form button:hover {
+  cursor: pointer;
+}
+
+.actividad4 body main section.addPostSide form .input-group {
+  width: 100%;
+  margin: 4% 0%;
+}
+
+.actividad4 body main section.addPostSide form .input-group input,
+.actividad4 body main section.addPostSide form .input-group textarea,
+.actividad4 body main section.addPostSide form .input-group select {
+  width: 100%;
+  border: 0.5px solid #fff;
+  background-color: transparent;
+  height: 30px;
+  padding: 0% 2%;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.actividad4 body main section.addPostSide form .input-group input::-webkit-input-placeholder,
+.actividad4 body main section.addPostSide form .input-group textarea::-webkit-input-placeholder,
+.actividad4 body main section.addPostSide form .input-group select::-webkit-input-placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+.actividad4 body main section.addPostSide form .input-group input option,
+.actividad4 body main section.addPostSide form .input-group textarea option,
+.actividad4 body main section.addPostSide form .input-group select option {
+  background-color: #036288;
+}
+
+.actividad4 body main section.addPostSide form .input-group textarea {
+  resize: none;
+  height: 100px;
+  padding: 2% 2%;
+}
+
+.actividad4 body main section.historyPost {
+  background-color: #00b963;
+  padding-top: 75px;
+}
+
+.actividad4 body main section.historyPost h3 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.actividad4 body main section.historyPost .filterContent select {
+  width: 50%;
+  display: block;
+  margin: auto;
+  border: none;
+  padding: 2% 3%;
+}
+
+.actividad4 body main section.historyPost .postContent {
+  margin-top: 3%;
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.actividad4 body main section.historyPost .postContent::-webkit-scrollbar {
+  width: 3px;
+}
+
+.actividad4 body main section.historyPost .postContent::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.actividad4 body main section.historyPost .postContent::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+
+.actividad4 body main section.historyPost .postContent::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem {
+  display: block;
+  margin: 3% auto;
+  width: 50%;
+  height: 250px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+  padding: 2%;
+  position: relative;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .addOnPriority {
+  position: absolute;
+  right: -7%;
+  top: -7%;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 40px;
+  width: 150px;
+  padding: 2% 3%;
+  border: 1px solid #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .title input {
+  color: #333;
+  margin-bottom: 1%;
+  text-align: center;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .title input:focus {
+  outline: none;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .description textarea {
+  text-align: justify;
+  overflow-y: scroll;
+  height: 160px;
+  width: 100%;
+  resize: none;
+  font-family: sans-serif;
+  background-color: transparent;
+  border: none;
+  padding: 1% 2%;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .description textarea:focus {
+  outline: none;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .description textarea::-webkit-scrollbar {
+  width: 3px;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .description textarea::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .description textarea::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .description textarea::-webkit-scrollbar-thumb:hover {
+  background: #737373;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .actions li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0% 1%;
+  list-style-type: none;
+  color: #fff;
+  padding: 3% 4%;
+  -webkit-transition: ease all .2s;
+  transition: ease all .2s;
+  background-color: rgba(57, 57, 57, 0.5);
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .actions li.none {
+  display: none;
+}
+
+.actividad4 body main section.historyPost .postContent .postItem .actions li:hover {
+  cursor: pointer;
+}
+
+.actividad4 body .alertMessage {
+  position: fixed;
+  z-index: 10000;
+  width: 30%;
+  height: 180px;
+  padding: 1%;
+  background-color: #e44e44;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
+  display: block;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.actividad4 body .alertMessage.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.actividad4 body .alertMessage .icon {
+  font-size: 4em;
+  text-align: center;
+  color: #fff;
+}
+
+.actividad4 body .alertMessage .message p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.actividad4 body .alertMessage .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.actividad4 body .alertMessage .button button {
+  padding: 3% 5%;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  display: inline-block;
+  margin: 1% 3%;
+  vertical-align: middle;
+}
+
+.actividad4 body .alertMessage .button button:hover {
+  cursor: pointer;
+}
+
+.actividad4 body .alertMessage .button button:focus {
+  outline: none;
+}
+
+.actividad4 body .alertMessage .button .info {
+  background-color: #fff;
+  color: #333;
+}
+
+.actividad4 body .alertMessage .button .success {
+  background-color: #00b963;
+  color: #fff;
 }
 /*# sourceMappingURL=styleTopicos.css.map */

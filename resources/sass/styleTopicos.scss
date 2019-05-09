@@ -1,70 +1,936 @@
-// Archivo realizado por Selvas y su Marimba Orquesta.
-// Universal
-body {
-    display: none;
-}
-
-// End universal
-a:hover {
-    text-decoration: none;
-}
-
-.menu {
-    .pageContent {
-        margin-top: 2%;
-    }
-    .actividadItem {
-        background-color: #4B5BE9;
-        padding: 1% 3%;
-        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.8);
-        border-radius: 5px;
-        transition: ease all 0.3s;
-        transform-origin: left;
-        margin: 2% 0;
-        transform: translateX(-1000px);
-        opacity: 0;
-        &.show {
-            transform: translateX(0px);
-            opacity: 1;
-        }
-        &:hover {
-            background-color: rgb(131, 140, 224);
-            transform: translateX(20px);
-        }
-        .actividadInfo p {
-            color: #fff;
-        }
-        .actividadInfo {
-            .name {
-                float: left;
-            }
-            .fecha {
-                float: right;
-            }
-            .descripcion {
-                clear: both;
-            }
-        }
-    }
-}
-
-.actividad1 {
-    body {
-        background-color: transparent;
-    }
-}
-
-.actividadX {
-    body {
-        background-color: #036288;
-        a,
-        p {
-            color: #fff;
-        }
-        section.miniAbout {
-            background-color: #fff;
-        }
-    }
-}
-
-.actividad3 {}
+                    // Archivo realizado por Selvas y su Marimba Orquesta.
+                    // Universal
+                    @import url(https://fonts.googleapis.com/css?family=Anton|Indie+Flower|Oswald|Pacifico|Roboto|Sniglet|ZCOOL+QingKe+HuangYou);
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    body {
+                        display: none;
+                    }
+                    
+                    .blackCap {
+                        position: fixed;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        top: 0;
+                        left: 0;
+                        z-index: 10;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: ease all 0.4s;
+                    }
+                    
+                    .blackCap.active {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                    
+                    // End universal
+                    a:hover {
+                        text-decoration: none;
+                    }
+                    
+                    // variables
+                    $font1: "Sniglet";
+                    $font2: "Oswald";
+                    $font3: "ZCOOL QingKe HuangYou";
+                    $font4: "Roboto";
+                    $font5: "Anton";
+                    $font6: "Indie Flower";
+                    $font7: "Pacifico";
+                    // Mixin
+                    @mixin centrarAPantalla {
+                        display: block;
+                        margin: auto;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    
+                    .menu {
+                        .pageContent {
+                            margin-top: 2%;
+                        }
+                        .actividadItem {
+                            background-color: #4B5BE9;
+                            padding: 1% 3%;
+                            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.8);
+                            border-radius: 5px;
+                            transition: ease all 0.3s;
+                            transform-origin: left;
+                            margin: 2% 0;
+                            transform: translateX(-1000px);
+                            opacity: 0;
+                            &.show {
+                                transform: translateX(0px);
+                                opacity: 1;
+                            }
+                            &:hover {
+                                background-color: rgb(131, 140, 224);
+                                transform: translateX(20px);
+                            }
+                            .actividadInfo p {
+                                color: #fff;
+                            }
+                            .actividadInfo {
+                                .name {
+                                    float: left;
+                                }
+                                .fecha {
+                                    float: right;
+                                }
+                                .descripcion {
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .actividad1 {
+                        body {
+                            background-color: transparent;
+                        }
+                    }
+                    
+                    .actividadX {
+                        body {
+                            background-color: #036288;
+                            a,
+                            p {
+                                color: #fff;
+                            }
+                            section.miniAbout {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    
+                    .actividad3 {
+                        header {
+                            background-color: #0395ce;
+                            font-family: $font1, sans-serif;
+                            overflow: hidden;
+                            padding: 0% 3%;
+                            .switchNav {
+                                display: none;
+                            }
+                            nav {
+                                &>* {
+                                    display: inline-block;
+                                }
+                                .actionsNav {
+                                    width: calc(100% - 200px);
+                                    ul {
+                                        margin-left: 3%;
+                                        width: 100%;
+                                        li {
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            transform-origin: center;
+                                            transition: ease all 0.2s;
+                                            padding: 1% 2%;
+                                            &:hover {
+                                                cursor: pointer;
+                                                background-color: #8265f5;
+                                                transform: scale(1.1);
+                                            }
+                                            a {
+                                                color: #fff;
+                                                text-decoration: none;
+                                                &:hover {
+                                                    text-decoration: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        main {
+                            .gallery {
+                                position: relative;
+                                box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+                                .imageItem {
+                                    figure {
+                                        position: relative;
+                                        height: 600px;
+                                        overflow: hidden;
+                                        img {
+                                            width: 100%;
+                                        }
+                                        figcaption {
+                                            position: absolute;
+                                            height: 100%;
+                                            left: 0;
+                                            top: 0;
+                                            width: 100%;
+                                            background-color: rgba(0, 0, 0, 0.5);
+                                            padding: 10% 4%;
+                                            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+                                            .titleImage {
+                                                h3 {
+                                                    color: #fff;
+                                                    font-family: $font3, sans-serif;
+                                                    font-size: 3.5em;
+                                                }
+                                            }
+                                            .descImage {
+                                                p {
+                                                    color: #fff;
+                                                    font-family: $font1, sans-serif;
+                                                    width: 60%;
+                                                    margin-top: 2%;
+                                                    margin-bottom: 2%;
+                                                }
+                                            }
+                                            .actionsImage {
+                                                .action {
+                                                    display: inline-block;
+                                                    width: 150px;
+                                                    height: 50px;
+                                                    margin: 0% 2%;
+                                                    button {
+                                                        font-family: $font1, sans-serif;
+                                                        background-color: #fff;
+                                                        color: #333;
+                                                        border: none;
+                                                        font-size: 1.1em;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        padding: 1% 2%;
+                                                        border-radius: 40px;
+                                                        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+                                                        transition: ease all 0.2s;
+                                                        transform-origin: center;
+                                                        &:hover {
+                                                            border-radius: 5px;
+                                                            cursor: pointer;
+                                                            transform: scale(1.1);
+                                                        }
+                                                        &:focus {
+                                                            outline: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .miniAbout {
+                                .informacionServiciosContent {
+                                    .aboutDescription {
+                                        background-color: transparent;
+                                        color: #333;
+                                        padding: 3% 2%;
+                                        position: relative;
+                                        &>* {
+                                            display: inline-block;
+                                            width: 48%;
+                                            vertical-align: middle;
+                                            position: relative;
+                                            z-index: 100;
+                                        }
+                                        &::before {
+                                            content: '';
+                                            position: absolute;
+                                            width: 0;
+                                            height: 0;
+                                            border-left: calc(100vw / 4) solid transparent;
+                                            border-right: calc(100vw / 4) solid transparent;
+                                            border-top: calc(100vw / 4) solid #fff;
+                                            top: 55%;
+                                            left: 0;
+                                            display: block;
+                                            margin: auto;
+                                            bottom: 0;
+                                            right: 0;
+                                            z-index: 100;
+                                            animation: infinite ease 10s upDownArrow;
+                                        }
+                                        .imageDescription {
+                                            position: relative;
+                                            &::before {
+                                                position: absolute;
+                                                content: '';
+                                                width: 320px;
+                                                height: 320px;
+                                                display: block;
+                                                margin: auto;
+                                                left: 0;
+                                                top: 0;
+                                                right: 0;
+                                                bottom: 0;
+                                                border: 2px dashed #036288;
+                                                border-radius: 50%;
+                                                z-index: 10;
+                                                animation: linear 50s gira infinite;
+                                                transition: ease all 0.2s;
+                                                transform-origin: center;
+                                            }
+                                            figure {
+                                                border-radius: 50%;
+                                                overflow: hidden;
+                                                width: 300px;
+                                                height: 300px;
+                                                display: block;
+                                                margin: auto;
+                                                position: relative;
+                                                img {
+                                                    position: relative;
+                                                    right: 50%;
+                                                }
+                                            }
+                                        }
+                                        .info {
+                                            h2 {
+                                                font-family: $font6, sans-serif;
+                                                text-align: center;
+                                                font-size: 2.5em;
+                                            }
+                                            p {
+                                                font-family: $font1, sans-serif;
+                                                font-size: 1.2em;
+                                                text-align: justify;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .servicesContent {
+                                // background-color: #d68516;
+                                background-image: url("../img/edu.jpg");
+                                background-attachment: fixed;
+                                padding: 2% 0%;
+                                position: relative;
+                                padding-top: 13%;
+                                &::before {
+                                    position: absolute;
+                                    content: '';
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    top: 0;
+                                    left: 0;
+                                }
+                                & * {
+                                    position: relative;
+                                    z-index: 1000;
+                                }
+                                .titleServices {
+                                    h2 {
+                                        text-align: center;
+                                        font-family: $font3, sans-serif;
+                                        font-size: 2.5em;
+                                        color: #fff;
+                                    }
+                                }
+                                .serviceItem {
+                                    display: inline-block;
+                                    margin: 3% 4%;
+                                    width: calc(100% / 4);
+                                    .iconService {
+                                        font-size: 3.5em;
+                                        text-align: center;
+                                        color: #fff;
+                                    }
+                                    .descService {
+                                        h3 {
+                                            text-align: center;
+                                            color: #fff;
+                                            font-family: $font1, sans-serif;
+                                            font-size: 2em;
+                                        }
+                                        p {
+                                            color: #fff;
+                                            text-align: center;
+                                            font-family: $font6, sans-serif;
+                                            font-size: 1.3em;
+                                        }
+                                    }
+                                }
+                            }
+                            .bestModulos {
+                                &>h3 {
+                                    font-family: $font2, sans-serif;
+                                    text-align: center;
+                                    margin-top: 2%;
+                                    font-size: 2.5em;
+                                    color: #333;
+                                }
+                                .modulosContent {
+                                    padding: 5%;
+                                    padding-top: 2%;
+                                    .modulo {
+                                        width: calc(100% / 3);
+                                        padding: 2%;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        margin: 0 -2px;
+                                        .moduloImage {
+                                            height: 250px;
+                                            width: 250px;
+                                            background-size: cover;
+                                            background-position: center;
+                                            background-repeat: no-repeat;
+                                            border-radius: 50%;
+                                            display: block;
+                                            margin: auto;
+                                        }
+                                        .moduloTitle {
+                                            font-family: $font1, sans-serif;
+                                            color: #333;
+                                            text-align: center;
+                                            margin-top: 3%;
+                                        }
+                                        .descModulo {
+                                            font-family: $font4, sans-serif;
+                                            text-align: justify;
+                                            color: #737373;
+                                            font-size: 0.9em;
+                                            margin: 2% 0%;
+                                        }
+                                        .moduloActions {
+                                            button {
+                                                display: block;
+                                                margin: auto;
+                                                background-color: #333;
+                                                color: #fff;
+                                                font-family: sans-serif;
+                                                width: 50%;
+                                                border: none;
+                                                transform-origin: center;
+                                                transition: ease all 0.2s;
+                                                padding: 1% 2%;
+                                                font-size: 1.2em;
+                                                margin-top: 1%;
+                                                box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.5);
+                                                border-radius: 2px;
+                                                margin-top: 5%;
+                                                &:hover {
+                                                    cursor: pointer;
+                                                    background-color: #fff;
+                                                    color: #333;
+                                                    transform: scale(1.1);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        footer {
+                            .row {
+                                padding: 2%;
+                                &>p {
+                                    text-align: center;
+                                    color: #fff;
+                                    font-family: sans-serif;
+                                    padding: 1%;
+                                }
+                                background-color: #333;
+                                width: 100%;
+                                .footerCol {
+                                    width: calc(100% / 3 - 50px);
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    .title {
+                                        h3 {
+                                            color: #fff;
+                                            text-align: center;
+                                            font-family: $font3, sans-serif;
+                                            font-size: 1.6em;
+                                            margin-bottom: 4%;
+                                        }
+                                    }
+                                    .description {
+                                        p {
+                                            color: #fff;
+                                            font-family: $font1, sans-serif;
+                                        }
+                                        ul li {
+                                            color: #fff;
+                                            font-family: $font1, sans-serif;
+                                            list-style: none;
+                                            padding: 2% 1%;
+                                            transition: ease all 0.2s;
+                                            &:hover {
+                                                background-color: #fff;
+                                                color: #333;
+                                                transform: translateX(20px);
+                                            }
+                                            &:hover a {
+                                                color: #333;
+                                            }
+                                            a {
+                                                color: #fff;
+                                                text-decoration: none;
+                                                &:hover {
+                                                    text-decoration: none;
+                                                }
+                                            }
+                                        }
+                                        a {
+                                            text-decoration: none;
+                                            width: 100%;
+                                            button {
+                                                display: block;
+                                                margin: auto;
+                                                margin-top: 5%;
+                                                padding: 2%;
+                                                font-family: sans-serif;
+                                                color: #333;
+                                                border-radius: 2px;
+                                                background-color: #fff;
+                                                border: none;
+                                                transition: ease all 0.2s;
+                                                &:hover {
+                                                    cursor: pointer;
+                                                    transform: scale(1.1);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        body {
+                            display: block;
+                        }
+                    }
+                    
+                    // Actividad 3 medias queries
+                    @media only screen and (max-width: 1024px) and (min-width: 300px) {
+                        .actividad3 header .switchNav {
+                            display: block;
+                        }
+                        .actividad3 header .switchNav button {
+                            position: fixed;
+                            width: 50px;
+                            height: 50px;
+                            z-index: 10;
+                            font-size: 1.5em;
+                            display: block;
+                            right: 3%;
+                            top: 3%;
+                            background-color: #036288;
+                            color: #fff;
+                            border: 1px solid #fff;
+                            transition: ease all 0.3s;
+                        }
+                        .actividad3 header .switchNav button:hover {
+                            background-color: #fff;
+                            color: #333;
+                            cursor: pointer;
+                        }
+                        header nav {
+                            position: fixed;
+                            top: 0;
+                            z-index: 1000;
+                            background-color: #0362E3;
+                            height: 100%;
+                            left: -150%;
+                            width: 70%;
+                            overflow: hidden;
+                            box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.5);
+                            transition: ease all 0.5s;
+                            &.active {
+                                left: 0;
+                            }
+                        }
+                        div.logo figure img {
+                            display: block;
+                            margin: auto;
+                            width: 80%;
+                            height: 250px;
+                            background-color: #fff;
+                            border-radius: 50%;
+                        }
+                        .actividad3 header nav>* {
+                            display: block;
+                            width: 100%;
+                            margin: 2% 0%;
+                        }
+                        .actividad3 header nav .actionsNav {
+                            width: 100%;
+                        }
+                        .actividad3 header nav .actionsNav ul li {
+                            width: 100%;
+                            padding: 5% 3%;
+                            font-size: 1.5em;
+                            margin: 2% 0%;
+                        }
+                        .actividad3 main .gallery .imageItem figure figcaption .titleImage h3 {
+                            text-align: center;
+                        }
+                        .actividad3 main .gallery .imageItem figure figcaption .descImage p {
+                            width: 100%;
+                            text-align: justify;
+                        }
+                        .actividad3 main .gallery .imageItem figure figcaption .actionsImage .action {
+                            margin: auto;
+                            margin-top: 4%;
+                            width: 90%;
+                            display: block;
+                            font-size: 1.3em;
+                        }
+                        .actividad3 main .gallery .imageItem figure img {
+                            display: none;
+                        }
+                        .actividad3 main .gallery .imageItem {
+                            background-image: url(../img/fondo_image.jpg);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                        .actividad3 main .miniAbout .informacionServiciosContent .aboutDescription>* {
+                            display: block;
+                            width: 90%;
+                            margin: auto;
+                            margin-top: 6%;
+                        }
+                        .actividad3 main .servicesContent .serviceItem {
+                            display: block;
+                            width: 90%;
+                            margin: auto;
+                            margin-top: 3%;
+                        }
+                        .actividad3 main .bestModulos .modulosContent .modulo {
+                            display: block;
+                            width: 90%;
+                            margin: auto;
+                            margin-top: 3%;
+                        }
+                        .actividad3 footer .row .footerCol {
+                            display: block;
+                            width: 90%;
+                            margin: auto;
+                            margin-top: 3%;
+                        }
+                    }
+                    
+                    @keyframes gira {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    
+                    @keyframes upDownArrow {
+                        0%,
+                        100% {
+                            transform: translateY(0px);
+                        }
+                        50% {
+                            transform: translateY(50px);
+                        }
+                    }
+                    
+                    .actividad4 {
+                        body {
+                            display: block;
+                            box-sizing: border-box;
+                            font-family: sans-serif;
+                            overflow: hidden;
+                            header {
+                                nav {
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    position: fixed;
+                                    width: 100%;
+                                    z-index: 100;
+                                    li {
+                                        display: inline-block;
+                                        padding: 2% 3%;
+                                        transition: ease all 0.2s;
+                                        &:hover {
+                                            cursor: pointer;
+                                            background-color: #fff;
+                                            color: #333;
+                                            a {
+                                                color: #333;
+                                            }
+                                        }
+                                        a {
+                                            color: #fff;
+                                            text-decoration: none;
+                                            &:hover {
+                                                text-decoration: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            main {
+                                transition: ease all 0.2s;
+                                &>* {
+                                    float: left;
+                                    width: 50%;
+                                    height: 1000px;
+                                }
+                                &::before {
+                                    content: '\f104';
+                                    position: absolute;
+                                    width: 80px;
+                                    height: 80px;
+                                    background-color: #fff;
+                                    font-family: "FontAwesome";
+                                    @include centrarAPantalla;
+                                    border-radius: 50%;
+                                    font-weight: bold;
+                                    font-size: 3em;
+                                    color: #333;
+                                    padding: 1%;
+                                    box-sizing: border-box;
+                                    transition: ease all 0.2s;
+                                    z-index: 1000;
+                                }
+                                section.addPostSide {
+                                    background-color: #4f54b5;
+                                    position: relative;
+                                    form {
+                                        h3 {
+                                            text-align: center;
+                                            color: #fff;
+                                            text-transform: uppercase;
+                                        }
+                                        button {
+                                            background-color: #ffffff;
+                                            color: #333;
+                                            width: 50%;
+                                            display: block;
+                                            margin: auto;
+                                            border: none;
+                                            border-radius: 3px;
+                                            padding: 2% 3%;
+                                            &:hover {
+                                                cursor: pointer;
+                                            }
+                                        }
+                                        background-color: #036288;
+                                        position: absolute;
+                                        @include centrarAPantalla;
+                                        top: 8%;
+                                        bottom: auto;
+                                        width: 60%;
+                                        height: 450px;
+                                        box-shadow: 0px 3px 5px 0px rgba(0,
+                                        0,
+                                        0,
+                                        .8);
+                                        padding: 8%;
+                                        .input-group {
+                                            width: 100%;
+                                            margin: 4% 0%;
+                                            input,
+                                            textarea,
+                                            select {
+                                                width: 100%;
+                                                border: 0.5px solid #fff;
+                                                background-color: transparent;
+                                                height: 30px;
+                                                padding: 0% 2%;
+                                                color: #fff;
+                                                font-family: sans-serif;
+                                                &::-webkit-input-placeholder {
+                                                    color: #fff;
+                                                    text-align: center;
+                                                }
+                                                option {
+                                                    background-color: #036288;
+                                                }
+                                            }
+                                            textarea {
+                                                resize: none;
+                                                height: 100px;
+                                                padding: 2% 2%;
+                                            }
+                                        }
+                                    }
+                                }
+                                section.historyPost {
+                                    background-color: #00b963;
+                                    padding-top: 75px;
+                                    h3 {
+                                        text-align: center;
+                                        color: #fff;
+                                        text-transform: uppercase;
+                                    }
+                                    .filterContent {
+                                        select {
+                                            width: 50%;
+                                            display: block;
+                                            margin: auto;
+                                            border: none;
+                                            padding: 2% 3%;
+                                        }
+                                    }
+                                    .postContent {
+                                        margin-top: 3%;
+                                        overflow-y: scroll;
+                                        height: 400px;
+                                        &::-webkit-scrollbar {
+                                            width: 3px;
+                                        }
+                                        &::-webkit-scrollbar-track {
+                                            background-color: rgba(0, 0, 0, 0.3);
+                                        }
+                                        &::-webkit-scrollbar-thumb {
+                                            background-color: #333;
+                                        }
+                                        &::-webkit-scrollbar-thumb:hover {
+                                            background-color: #ccc;
+                                        }
+                                        .postItem {
+                                            display: block;
+                                            margin: 3% auto;
+                                            width: 50%;
+                                            height: 250px;
+                                            box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.8);
+                                            padding: 2%;
+                                            position: relative;
+                                            .addOnPriority {
+                                                position: absolute;
+                                                right: -7%;
+                                                top: -7%;
+                                                color: #fff;
+                                                font-weight: bold;
+                                                border-radius: 40px;
+                                                width: 150px;
+                                                padding: 2% 3%;
+                                                border: 1px solid #fff;
+                                                text-align: center;
+                                                text-transform: uppercase;
+                                            }
+                                            .title input {
+                                                color: #333;
+                                                margin-bottom: 1%;
+                                                text-align: center;
+                                                font-weight: bold;
+                                                background-color: transparent;
+                                                border: none;
+                                                font-size: 1.5em;
+                                                &:focus {
+                                                    outline: none;
+                                                }
+                                            }
+                                            .description textarea {
+                                                text-align: justify;
+                                                overflow-y: scroll;
+                                                height: 160px;
+                                                width: 100%;
+                                                resize: none;
+                                                font-family: sans-serif;
+                                                background-color: transparent;
+                                                border: none;
+                                                padding: 1% 2%;
+                                                &:focus {
+                                                    outline: none;
+                                                }
+                                                /* width */
+                                                &::-webkit-scrollbar {
+                                                    width: 3px;
+                                                }
+                                                /* Track */
+                                                &::-webkit-scrollbar-track {
+                                                    background: rgba(0, 0, 0, .3)
+                                                }
+                                                /* Handle */
+                                                &::-webkit-scrollbar-thumb {
+                                                    background: #333;
+                                                }
+                                                /* Handle on hover */
+                                                &::-webkit-scrollbar-thumb:hover {
+                                                    background: #737373;
+                                                }
+                                            }
+                                            .actions {
+                                                li {
+                                                    &.none {
+                                                        display: none;
+                                                    }
+                                                    display: inline-block;
+                                                    vertical-align: middle;
+                                                    margin: 0% 1%;
+                                                    list-style-type: none;
+                                                    color: #fff;
+                                                    padding: 3% 4%;
+                                                    transition: ease all .2s;
+                                                    background-color: rgba(57,
+                                                    57,
+                                                    57,
+                                                    0.5);
+                                                    &:hover {
+                                                        cursor: pointer;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .alertMessage {
+                                position: fixed;
+                                z-index: 10000;
+                                width: 30%;
+                                height: 180px;
+                                padding: 1%;
+                                background-color: #e44e44;
+                                box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+                                opacity: 0;
+                                visibility: hidden;
+                                transform: translateY(50px);
+                                transition: ease all 0.5s;
+                                @include centrarAPantalla;
+                                &.active {
+                                    opacity: 1;
+                                    visibility: visible;
+                                    transform: translateY(0px);
+                                }
+                                .icon {
+                                    font-size: 4em;
+                                    text-align: center;
+                                    color: #fff;
+                                }
+                                .message p {
+                                    text-align: center;
+                                    font-size: 1.2em;
+                                    color: #fff;
+                                }
+                                .button {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    button {
+                                        padding: 3% 5%;
+                                        font-weight: bold;
+                                        border-radius: 30px;
+                                        border: none;
+                                        display: inline-block;
+                                        margin: 1% 3%;
+                                        vertical-align: middle;
+                                        &:hover {
+                                            cursor: pointer;
+                                        }
+                                        &:focus {
+                                            outline: none;
+                                        }
+                                    }
+                                    .info {
+                                        background-color: #fff;
+                                        color: #333;
+                                    }
+                                    .success {
+                                        background-color: #00b963;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }

@@ -48,6 +48,19 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="actividadItem">
+                                <a href="/actividad4">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <div class="actividadInfo">
+                                                <div class="name"><p>Actividad 4 - Práctica Javascript y AJAX</p></div>
+                                                <div class="fecha"><p>27/04/2019</p></div>
+                                                <div class="descripcion"><p>En esta práctica implementaremos Javascript y AJAX para un pequeño sistema de Postits.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                    
                             
                             
